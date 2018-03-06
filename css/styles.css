@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Century Gothic', sans-serif; }
+
+/* variables here */
+/* debe ser 100% */
+/* debe ser 768 */
+/* debe ser 1023 */
+/* mixins here */
+img {
+  width: 100%; }
+
+.menu__natgeo-logo {
+  width: 100px; }
+
+.menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  border-bottom: 1px solid #aaaaaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .menu__barras {
+    margin-right: 5px; }
+    @media screen and (min-width: 800px) {
+      .menu__barras {
+        display: none; } }
+  .menu__botones {
+    display: none; }
+    @media screen and (min-width: 800px) {
+      .menu__botones {
+        display: block; } }
+    .menu__botones button {
+      background-color: white;
+      border: 0;
+      border-left: 1px solid #fecd2f; }
+
+.content {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  /* @include targeting;  esto solo se uso' para identificar visualmente los targets */
+  margin-top: 70px;
+  margin: 0 auto;
+  display: flex; }
+
+.photography {
+  margin-top: 30px; }
+
+.see-more-box {
+  margin-bottom: 40px; }
+
+.under-line {
+  display: inline;
+  border-bottom: 2px solid #fecd2f; }
+
+h3 {
+  margin-left: 10px; }
+
+.smallp {
+  font-size: small; }
+
+.quote {
+  width: 100%;
+  padding: 0px 0px 0px 10px;
+  border-left: 1px solid black;
+  margin-left: 10px; }
+
+.boton-show-more {
+  display: block;
+  width: 100%;
+  background: #fecd2f;
+  border: 2px solid black;
+  padding: 10px;
+  color: black; }
+  @media screen and (min-width: 500px) {
+    .boton-show-more {
+      width: 500px;
+      margin: 30px auto; } }
+
+.tree-monkey {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px; }
+
+.redes {
+  background: black;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column; }
+  .redes__titulo {
+    text-align: center; }
+  .redes__logos {
+    align-self: center;
+    margin: 5px 0 5px 0;
+    display: flex; }
+    .redes__logos .logo-twitter {
+      font-size: 40px;
+      color: #0084b4;
+      margin: 0 5px 0 5px; }
+    .redes__logos .logo-fb {
+      font-size: 30px;
+      color: #3B5998;
+      margin: 0 10px 0 5px; }
+    .redes__logos .logo-instagram {
+      font-size: 30px;
+      color: #262626;
+      margin: 0 5px 0 5px; }
+  @media screen and (min-width: 500px) {
+    .redes {
+      flex: 1; } }
+
+.community {
+  background: black;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 450px; }
+  .community__titulo {
+    align-self: center; }
+  .community__texto {
+    text-align: center; }
+  .community__join {
+    text-align: center;
+    margin-top: 10px; }
+
+.archives {
+  background: black;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column; }
+  .archives__titulo {
+    text-align: center; }
+  .archives__texto {
+    text-align: center; }
+  .archives__explore {
+    text-align: center;
+    margin-top: 10px; }
+
+.picture-stories {
+  background: black;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column; }
+  .picture-stories__titulo {
+    text-align: center; }
+  .picture-stories__texto {
+    text-align: center; }
+  .picture-stories__see-more {
+    text-align: center;
+    margin-top: 10px; }
+
+.subscribe-and-follow {
+  background-color: #aaaaaa;
+  padding: 30px;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 500px) {
+    .subscribe-and-follow {
+      flex-direction: row;
+      justify-content: space-between; } }
+  .subscribe-and-follow .subscribe-form,
+  .subscribe-and-follow .subcribe-follow {
+    border-left: 1px solid #333333;
+    padding: 0 0 0 10px; }
+  .subscribe-and-follow form {
+    margin-bottom: 30px; }
+  .subscribe-and-follow .input-email {
+    width: 150px;
+    height: 26px;
+    border: 0; }
+  .subscribe-and-follow .boton-signup {
+    border: 0;
+    border-radius: 0;
+    padding: 5px 10px 5px 10px;
+    background-color: #fecd2f; }
+
+@media screen and (min-width: 500px) {
+  .travel-photography__articles {
+    /* esto solo se uso' para identificar visualmente los targets */ }
+    .travel-photography__articles .top-cameras {
+      display: flex;
+      flex-direction: row; }
+    .travel-photography__articles .supermoon {
+      display: flex;
+      flex-direction: row; }
+  .menu-inferior {
+    display: flex;
+    flex-direction: column; }
+    .menu-inferior .menu-inferior__box1 {
+      max-width: 900px;
+      display: flex;
+      flex-direction: row; }
+    .menu-inferior .menu-inferior__box2 {
+      max-width: 900px;
+      display: flex;
+      flex-direction: row; } }
+  @media screen and (min-width: 500px) and (min-width: 800px) {
+    .menu-inferior {
+      flex-direction: row; } }

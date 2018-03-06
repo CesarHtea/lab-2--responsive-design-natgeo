@@ -1,0 +1,23 @@
+{
+  "name": "w02--responsive-design-natgeo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass style.scss ./css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CesarHtea/lab-2--responsive-design-natgeo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CesarHtea/lab-2--responsive-design-natgeo/issues"
+  },
+  "homepage": "https://github.com/CesarHtea/lab-2--responsive-design-natgeo#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
