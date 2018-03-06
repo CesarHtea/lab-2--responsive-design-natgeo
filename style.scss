@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Century Gothic', sans-serif; 
+}
+
+/* variables here */
+
+$images-width: 100%;  /* debe ser 100% */
+$break-point-for-tablet: 500px; /* debe ser 768 */
+$break-point-for-desktop: 800px; /* debe ser 1023 */
+$color-principal: #fecd2f; 
+
+/* mixins here */
+
+@mixin targeting {
+  /* esto solo se uso' para identificar visualmente los targets */
+  border: 1px solid red;
+  @media screen and (min-width: $break-point-for-tablet) {
+    border: 1px solid green;
+  }
+  @media screen and (min-width: $break-point-for-desktop) {
+    border: 1px solid blue;
+  }
+}
+@mixin black-square {
+  background: black;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: $images-width;
+}
+.menu__natgeo-logo {
+  width: 100px; 
+}
+.menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  border-bottom: 1px solid #aaaaaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__barras {
+    margin-right: 5px;
+    @media screen and (min-width: $break-point-for-desktop) {
+      display: none;
+    }
+  }
+  &__botones {
+    display: none;
+    @media screen and (min-width: $break-point-for-desktop) {
+      display: block;
+    }
+    button {
+      background-color: white;
+      border: 0;
+      border-left: 1px solid $color-principal ;
+      
+    }
+  }
+}
+.content {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  /* @include targeting;  esto solo se uso' para identificar visualmente los targets */
+  margin-top: 70px;
+  margin: 0 auto;
+  display: flex;
+}
+.photography {
+   margin-top: 30px;
+}
+.see-more-box {
+  margin-bottom: 40px;
+}
+.under-line {
+  display: inline;
+  border-bottom: 2px solid $color-principal;
+}
+
+h3 {
+  margin-left: 10px;
+}
+
+.quote {
+  width: 100%;
+  padding: 0px 0px 0px 10px;
+  border-left: 1px solid black;
+  margin-left: 10px;
+}
+.boton-show-more {
+  display: block;
+  width: 100%;
+  @media screen and (min-width: $break-point-for-tablet) {
+    width: 500px ;
+    margin: 30px auto;
+  }
+  background: $color-principal ;
+  border: 2px solid black;
+  padding: 10px;
+  color: black;
+}
+.tree-monkey {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.redes {
+    @include black-square;
+   &__titulo {
+      text-align: center;
+   }
+   &__logos {
+      align-self: center;
+      margin: 5px 0 5px 0;
+      display: flex;
+      .logo-twitter {
+        font-size: 40px;
+        color: #0084b4;
+        margin: 0 5px 0 5px;
+   }
+      .logo-fb {
+          font-size: 30px;
+          color: #3B5998;
+          margin: 0 10px 0 5px;
+      }
+      .logo-instagram {
+        font-size: 30px;
+        color: #262626;
+        margin: 0 5px 0 5px;
+      }
+    }
+  @media screen and (min-width: $break-point-for-tablet) {
+  flex: 1;
+  }
+}
+.community {
+    @include black-square;
+    max-width: 450px;
+    &__titulo {
+      align-self: center;
+    }
+    &__texto {
+      text-align: center;
+    }
+    &__join {
+      text-align: center;
+      margin-top: 10px;
+  }
+}
+.archives {
+    @include black-square;
+    &__titulo {
+      text-align: center;
+    }
+    &__texto {
+      text-align: center;
+    }
+    &__explore {
+      text-align: center;
+      margin-top: 10px;
+    }
+}
+.picture-stories {
+  @include black-square;
+    &__titulo {
+      text-align: center;
+    }
+    &__texto {
+      text-align: center;
+    }
+    &__see-more {
+      text-align: center;
+      margin-top: 10px;
+    }
+} 
+.subscribe-and-follow {
+  background-color: #aaaaaa;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $break-point-for-tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .subscribe-form,
+  .subcribe-follow {
+    border-left: 1px solid #333333;
+    padding: 0 0 0 10px;
+  }
+  form {
+    margin-bottom: 30px;
+  }
+  .input-email {
+    width: 150px;
+    height: 26px;
+    border: 0;
+  }
+  .boton-signup {
+    border: 0;
+    border-radius: 0;
+    padding: 5px 10px 5px 10px;
+    background-color: $color-principal;
+  }
+}
+@media screen and (min-width: $break-point-for-tablet) {
+  .travel-photography__articles {
+    @include targeting;
+    .top-cameras {
+        display: flex;
+        flex-direction: row;
+    }
+    .supermoon {
+        display: flex;
+        flex-direction: row;
+    }
+  }
+  .menu-inferior {
+    display: flex;
+    flex-direction: column;
+      
+    .menu-inferior__box1 {
+        max-width: 900px;
+        display: flex;
+        flex-direction: row;
+    }
+    .menu-inferior__box2 {
+        max-width: 900px;
+        display: flex;
+        flex-direction: row;
+    }
+  
+    @media screen and (min-width: $break-point-for-desktop) {
+      flex-direction: row;
+    }
+  }
+}
